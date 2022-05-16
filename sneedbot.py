@@ -12,13 +12,13 @@ async def on_ready():
 @bot.event
 async def on_message(message):
     channel = message.channel
-    if 'sneed' in message.content:
-        await message.add_reaction(":sneed:912786155886477383")
-    if 'SNEED' in message.content:
+    content = message.content
+    if 'sneed' in content.lower():
         await message.add_reaction(":sneed:912786155886477383")
 
 @bot.command()
 async def sneed(ctx):
-    await ctx.send("https://static.wikia.nocookie.net/simpsons/images/1/14/Al_Sneed.png/revision/latest?cb=20210430000431")
+    await ctx.send("https://static.wikia.nocookie.net/simpsons/images/1/14/Al_Sneed.png/revision/latest/scale-to-width-down/350?cb=20210430000431")
  
-bot.run("OTI0MzM5MDY0MTQ3MTYxMTk4.YcdH1g.M-mSqBSwg95cNgerLP0Zt70RK7w")
+token = "your Token here"
+bot.run(token)
